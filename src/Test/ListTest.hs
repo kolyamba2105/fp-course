@@ -25,18 +25,18 @@ module Test.ListTest (
   , test
   ) where
 
-import qualified Prelude          as P (length)
+import qualified Prelude         as P (length)
 
-import           Test.Framework   (TestTree, testCase, testGroup,
-                                   testProperty, test, (@?=))
+import           Test.Framework  (TestTree, test, testCase, testGroup,
+                                  testProperty, (@?=))
 
 import           Course.Core
-import           Course.List      (List ((:.), Nil), filter, find, flatMap,
-                                   flatten, flattenAgain, foldLeft, headOr,
-                                   hlist, infinity, largeList, length,
-                                   lengthGT4, listh, map, produce, product,
-                                   reverse, seqOptional, sum, take, (++))
-import           Course.Optional  (Optional (Empty, Full))
+import           Course.List     (List (Nil, (:.)), filter, find, flatMap,
+                                  flatten, flattenAgain, foldLeft, headOr,
+                                  hlist, infinity, largeList, length, lengthGT4,
+                                  listh, map, produce, product, reverse,
+                                  seqOptional, sum, take, (++))
+import           Course.Optional (Optional (Empty, Full))
 
 test_List :: TestTree
 test_List =
