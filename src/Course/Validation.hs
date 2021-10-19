@@ -1,17 +1,16 @@
-{-# LANGUAGE NoImplicitPrelude #-}
+{-# LANGUAGE NoImplicitPrelude   #-}
 {-# LANGUAGE ScopedTypeVariables #-}
 
 module Course.Validation where
 
-import qualified Prelude as P(String)
-import Course.Core
+import           Course.Core
+import qualified Prelude     as P (String)
 
 -- $setup
 -- >>> import Test.QuickCheck
 -- >>> import qualified Prelude as P(fmap, either)
 -- >>> instance Arbitrary a => Arbitrary (Validation a) where arbitrary = P.fmap (P.either Error Value) arbitrary
-data Validation a = Error Err | Value a
-  deriving (Eq, Show)
+data Validation a = Error Err | Value a deriving (Eq, Show)
 
 type Err = P.String
 
