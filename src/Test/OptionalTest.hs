@@ -14,11 +14,11 @@ module Test.OptionalTest (
   , test
   ) where
 
-import           Test.Framework   (TestTree, testCase, testGroup, test, (@?=))
+import           Test.Framework  (TestTree, test, testCase, testGroup, (@?=))
 
 import           Course.Core
-import           Course.Optional  (Optional (..), bindOptional, mapOptional,
-                                   optional, (<+>), (??))
+import           Course.Optional (Optional (..), bindOptional, mapOptional,
+                                  optional, (<+>), (??))
 
 test_Optional :: TestTree
 test_Optional =
