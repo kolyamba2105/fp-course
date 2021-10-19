@@ -17,13 +17,13 @@ module Test.FunctorTest (
   , test
   ) where
 
-import           Test.Framework    (TestTree, testCase, testGroup,
-                                    testProperty, test, (@?=))
+import           Test.Framework    (TestTree, test, testCase, testGroup,
+                                    testProperty, (@?=))
 
 import           Course.Core
 import           Course.ExactlyOne (ExactlyOne (ExactlyOne))
 import           Course.Functor    (void, (<$), (<$>))
-import           Course.List       (List ((:.), Nil))
+import           Course.List       (List (Nil, (:.)))
 import           Course.Optional   (Optional (Empty, Full))
 
 test_Functor :: TestTree
