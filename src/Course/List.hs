@@ -544,13 +544,8 @@ repeat ::
 repeat x =
   x :. repeat x
 
-replicate ::
-  (Num n, Ord n) =>
-  n
-  -> a
-  -> List a
-replicate n x =
-  take n (repeat x)
+replicate :: (Num n, Ord n) => n -> a -> List a
+replicate n x = take n (repeat x)
 
 reads ::
   P.Read a =>

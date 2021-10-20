@@ -25,19 +25,19 @@ module Test.ApplicativeTest (
   , test
   ) where
 
-import           Test.Framework     (TestTree, (@?=), testCase, testGroup,
-                                     testProperty, test)
+import           Test.Framework          (TestTree, test, testCase, testGroup,
+                                          testProperty, (@?=))
 import           Test.Framework.Property
 
-import           Course.Applicative (filtering, lift1, lift2, lift3, lift4,
-                                     pure, replicateA, sequence, (*>), (<*),
-                                     (<*>))
+import           Course.Applicative      (filtering, lift1, lift2, lift3, lift4,
+                                          pure, replicateA, sequence, (*>),
+                                          (<*), (<*>))
 import           Course.Core
-import           Course.ExactlyOne  (ExactlyOne (ExactlyOne))
-import           Course.Functor     ((<$>))
-import           Course.List        (List ((:.), Nil), filter, length, listh,
-                                     product, sum)
-import           Course.Optional    (Optional (Empty, Full))
+import           Course.ExactlyOne       (ExactlyOne (ExactlyOne))
+import           Course.Functor          ((<$>))
+import           Course.List             (List (Nil, (:.)), filter, length,
+                                          listh, product, sum)
+import           Course.Optional         (Optional (Empty, Full))
 
 test_Applicative :: TestTree
 test_Applicative =
