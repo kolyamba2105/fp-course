@@ -18,7 +18,7 @@ module Test.MonadTest (
   , test
   ) where
 
-import           Test.Framework    (TestTree, testCase, testGroup, test, (@?=))
+import           Test.Framework    (TestTree, test, testCase, testGroup, (@?=))
 
 import           Course.Core
 import           Course.ExactlyOne (ExactlyOne (..))
