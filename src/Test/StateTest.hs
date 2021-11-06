@@ -22,22 +22,23 @@ module Test.StateTest (
   , test
   ) where
 
-import           Data.List          (nub)
-import qualified Prelude            as P ((++))
+import           Data.List               (nub)
+import qualified Prelude                 as P ((++))
 
-import           Test.Framework     (TestTree, testCase, testGroup,
-                                     testProperty, test, (@?=))
-import           Test.Framework.Property (Unshowable(..))
+import           Test.Framework          (TestTree, test, testCase, testGroup,
+                                          testProperty, (@?=))
+import           Test.Framework.Property (Unshowable (..))
 
-import           Course.Applicative (pure, (<*>))
+import           Course.Applicative      (pure, (<*>))
 import           Course.Core
-import           Course.Functor     ((<$>))
-import           Course.List        (List (..), filter, flatMap, hlist, length,
-                                     listh, span, (++))
+import           Course.Functor          ((<$>))
+import           Course.List             (List (..), filter, flatMap, hlist,
+                                          length, listh, span, (++))
 import           Course.Monad
-import           Course.Optional    (Optional (Empty, Full))
-import           Course.State       (State (State), distinct, eval, exec, findM,
-                                     firstRepeat, get, isHappy, put, runState)
+import           Course.Optional         (Optional (Empty, Full))
+import           Course.State            (State (State), distinct, eval, exec,
+                                          findM, firstRepeat, get, isHappy, put,
+                                          runState)
 
 test_State :: TestTree
 test_State =
